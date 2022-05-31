@@ -10,13 +10,17 @@
 
 <body>
     <nav>
-        <a href="/clubs/">Back to Books Index</a>
+        <a href="/clubs/">Back to Club Index</a>
+        <h3>
+            Club: <%= club.name %>
+        </h3>
+        <h3>
+            About: <%= club.description %>
+        </h3>
 
     </nav>
-    <h5>
-        <%= club.discription %>
-    </h5>
-    Image: <img src=" <%=club.img; %>" alt="" />
+
+    <img src=" <%=club.img; %>" alt="" />
     <br />
 </body>
 
