@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const Club = require("./models/Soccer");
 const express = require("express");
 const app = express();
+const methodOverride = require("method-override");
 // const clubs = require("./models/leagues");
 
 const PORT = 3000;
@@ -17,6 +18,7 @@ db.on("error", (err) => console.log(err.message + " is mongo not running?"));
 db.on("connected", () => console.log("mongo connected"));
 db.on("disconnected", () => console.log("mongo disconnected"));
 
+app.use(methodOverride("_method"));
 //static files
 app.use(express.static(__dirname + "/public"));
 
@@ -85,6 +87,12 @@ app.get("/clubs/:id/edit", (req, res) => {
     res.render("edit.ejs", {
       club: foundClub,
     });
+  });
+});
+// DELETE
+app.delete("/clubs/:id", (req, res) => {
+  Club.findByIdAndRemove(req.params.id, (err, deletedClub) => {
+    res.redirect("/clubs");
   });
 });
 
