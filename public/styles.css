@@ -106,3 +106,44 @@ header li a {
   background-color: rgb(123, 96, 148);
   width: 200px;
 }
+
+/* .score {
+  background-image: url("https://images.unsplash.com/photo-1466065665758-d473db752253?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80");
+} */
+
+img {
+  width: 20%;
+  border-radius: 1em;
+}
+input[type="text"],
+input[type="submit"],
+.edits {
+  width: 20%;
+  padding: 1em;
+  border: 0px;
+  border-radius: 10em;
+  box-shadow: 1px 1px 2px #ddd;
+  margin: 0.5em 0;
+}
+input[type="submit"],
+.edits {
+  width: 61%;
+  font-family: "Montserrat";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1em;
+  color: rgb(245, 245, 245);
+  background-color: rgb(144, 163, 238);
+}
+input[type="submit"],
+.edit:hover {
+  cursor: pointer;
+  background: rgb(142, 89, 81);
+}
+form strong,
+.edits {
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 0.3em;
+  color: rgb(152, 130, 110);
+}

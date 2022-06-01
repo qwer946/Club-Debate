@@ -1,37 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
+<%- include('./partials/head.ejs')%>
 
-<head>
+    <body>
+        <header>
+            <%- include('./partials/header.ejs')%>
+        </header>
+        <nav>
 
-    <%- include('./partials/head.ejs')%>
-        <link rel="stylesheet" href="/styles.css">
+            <div class="container">
+                <ul>
+                    <% for(let i=0; i < clubs.length; i++){ %>
 
-</head>
-
-<body>
-    <header>
-        <%- include('./partials/header.ejs')%>
-    </header>
-    <nav>
-
-        <div class="container">
-            <ul>
-                <% for(let i=0; i < clubs.length; i++){ %>
-
-                    <li>
-                        <a href="/clubs/<%=clubs[i]._id%>">
-                            <%= clubs[i].name %>
-                        </a>
+                        <li>
+                            <a href="/clubs/<%=clubs[i]._id%>">
+                                <%= clubs[i].name %>
+                            </a>
 
 
-                    </li>
-                    <% } %>
-            </ul>
-    </nav>
-    </div>
+                        </li>
+                        <% } %>
+                </ul>
+        </nav>
+        </div>
 
 
 
-</body>
+    </body>
 
 </html>
