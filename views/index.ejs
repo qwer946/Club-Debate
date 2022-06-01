@@ -2,31 +2,32 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
-    <title>Soccer League</title>
+
+    <%- include('./partials/head.ejs')%>
+        <link rel="stylesheet" href="/styles.css">
+
 </head>
 
 <body>
     <header>
-        <h1>Welcome to Create A Soccer Club</h1>
-        <nav>
-            <ul>
-
-                <h1>Created Club List </h1>
-                <a href="/new/"> Create a new club</a>
-                <div class="container">
-                    <ul>
-                        <% for(let i=0; i < clubs.length; i++){ %>
-                            <li>
-                            <li>
-                                <a href="/clubs/<%=clubs[i]._id%>">
-                                    <%= clubs[i].name %>
-                                </a>
-                            </li>
-                            <% } %>
-                    </ul>
-        </nav>
+        <%- include('./partials/header.ejs')%>
     </header>
+    <nav>
+
+        <div class="container">
+            <ul>
+                <% for(let i=0; i < clubs.length; i++){ %>
+
+                    <li>
+                        <a href="/clubs/<%=clubs[i]._id%>">
+                            <%= clubs[i].name %>
+                        </a>
+                    </li>
+                    <% } %>
+            </ul>
+    </nav>
+    </div>
+
 
 
 </body>
